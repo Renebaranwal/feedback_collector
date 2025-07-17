@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Feedbacks</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: linear-gradient(to right, #e0f7fa, #80deea);
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 40px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #00796b;
+        }
+        a {
+            text-decoration: none;
+            background-color: #007BFF;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 4px;
+        }
+        .feedback {
+            background: #f9f9f9;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        .feedback strong {
+            color: #007BFF;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>All Feedbacks</h1>
+        <a href="/add">Add Feedback</a>
+        {% for fb in feedbacks %}
+            <div class="feedback">
+                <strong>{{ fb.name }}</strong><br>
+                {{ fb.message }}
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
