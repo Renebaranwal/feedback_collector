@@ -46,8 +46,8 @@
         <a href="/add">Add Feedback</a>
         {% for fb in feedbacks %}
             <div class="feedback">
-                <strong>{{ fb.name }}</strong><br>
-                {{ fb.message }}
+                <strong>{{ fb[0] }}</strong><br>
+                {{ fb[1] }}
             </div>
         {% endfor %}
     </div>
